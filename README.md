@@ -5,5 +5,8 @@
 ## Contents
 
 - *.Rmd, reports. [Talk](https://rawgit.com/gilmore-lab/ICIS-2016-New-Orleans/master/jayaraman-gilmore-raudies-ICIS-2016.html) in HTML.
+- *.bib, BibTex-format bibliography.
+- *.css, CSS3 style sheets.
+- [img/](img/), image files used in reports.
 - [analysis/](analysis/), R scripts and data supporting reports
     + [data/](analysis/data/), CSV-formatted data files
