@@ -128,24 +128,61 @@ f^2+y^2 & -xy & -fy
 [[@gilmore_what_2015]](http://doi.org/10.1109/DEVLRN.2015.7345450)
 </div>
 
-## Simulated Flow Speeds (m/s)
+## Simulated Flow Speeds (m/s) {.flexbox .vcenter}
 
+<div class="centered">
 | Type of Locomotion | Ground Plane | Room | Side Wall | Two Walls |
 |--------------------|--------------|------|-----------|-----------|
 | Crawling           | 14.41        | 14.42| 14.43     |14.62      |
 | Walking            | 9.38         | 8.56 | 7.39      |9.18       |
 
-<div class="centered">
-
+</br>
+</br>
 [[@gilmore_what_2015]](http://doi.org/10.1109/DEVLRN.2015.7345450)
 </div>
 
 ## **Measuring** Optic Flow in Natural Contexts
 
-- First-person videos from head-mounted cameras
-- Chennai, India & Bloomington, Indiana
-- Data: <http://databrary.org/volume/81>
-- n=32 infants, 16 each from India & U.S., 3-63 wks
+- First-person videos from head-mounted [cameras](https://github.com/gilmore-lab/ICIS-2016-New-Orleans/blob/master/methods.md#camera)
+- Parents asked to record [4-6 hrs of daily activities](https://github.com/gilmore-lab/ICIS-2016-New-Orleans/blob/master/methods.md#parent-instructions).
+- Chennai, Tamil Nadu, India & Bloomington, Indiana, U.S.
+
+## Sample characteristics {.flexbox .vcenter}
+
+
+```{r}
+us.df <- read.csv("analysis/data/PerInfUSms.csv", header=TRUE)
+india.df <- read.csv("analysis/data/PerInfIndiams.csv", header=TRUE)
+
+us.mins <- us.df %>%
+  group_by(subj) %>% summarize(tot.coded.hrs = sum(dur)/(1000*60*60)) %>%
+    mutate(mean.coded.hrs = mean(tot.coded.hrs),
+         min.coded.hrs = min(tot.coded.hrs),
+         max.coded.hrs = max(tot.coded.hrs))
+
+us.hrs.rg <- with(us.mins[1,], sprintf("%2.1f (%2.1f-%2.1f)", mean.coded.hrs, min.coded.hrs, max.coded.hrs ))
+
+india.mins <- india.df %>%
+  group_by(subj) %>% summarize(tot.coded.hrs = sum(dur)/(1000*60*60)) %>%
+    mutate(mean.coded.hrs = mean(tot.coded.hrs),
+         min.coded.hrs = min(tot.coded.hrs),
+         max.coded.hrs = max(tot.coded.hrs))
+
+india.hrs.rg <- with(india.mins[1,], sprintf("%2.1f (%2.1f-%2.1f)", mean.coded.hrs, min.coded.hrs, max.coded.hrs ))
+
+```
+
+<div class="centered">
+| Country | Females | Males | Age (wks) | Coded video Hrs        |
+|---------|---------|-------|-----------|------------------|
+| India   | 17      | 13    | 3-63      | `r india.hrs.rg` |
+| U.S.    | 15      | 19    | 4-62      | `r us.hrs.rg`    |
+
+</br>
+</br>
+Data & excerpts: <http://databrary.org/volume/81>
+
+</div>
 
 ## Workflow
 
