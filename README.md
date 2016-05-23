@@ -4,6 +4,6 @@
 
 ## Contents
 
-- *.Rmd, reports. [Talk](http://rawgit.com/) in HTML.
+- *.Rmd, reports. [Talk](https://rawgit.com/gilmore-lab/ICIS-2016-New-Orleans/master/jayaraman-gilmore-raudies-ICIS-2016.html) in HTML.
 - [analysis/](analysis/), R scripts and data supporting reports
     + [data/](analysis/data/), CSV-formatted data files
