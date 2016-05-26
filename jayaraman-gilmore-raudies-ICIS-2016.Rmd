@@ -32,11 +32,11 @@ Supported by NSF BCE-1147440, NSF BCS-1238599, NICHD U01-HD-076595
 - How do infants' natural experiences with optic flow develop?
 - Do the statistics of infants' natural experiences align with changes in sensitivity?
 
-## What is optic flow?
+## What is Optic Flow?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o27tIdYggY0" frameborder="0" allowfullscreen></iframe>
 
-## What is Optic Flow? {.flexbox .vcenter}
+## Optic Floe Components {.flexbox .vcenter}
 
 <div class="centered">
 <img src="img/optic-flow-types.png" width=900px>
@@ -50,11 +50,8 @@ Supported by NSF BCE-1147440, NSF BCS-1238599, NICHD U01-HD-076595
 
 ## Developmental Changes in Experiences of Optic Flow
 
-- [[@raudies_understanding_2012]](http://doi.org/10.1109/DevLrn.2012.6400584)
-    - Infants experience faster flow than mothers even when geometry, speed of locomotion equated
-- [[@raudies_visual_2014]](http://doi.org/http://dx.doi.org/10.1162/NECO_a_00645)
-    - Motion "prior" for infants faster than for mothers
-    - Empirical motion priors not "slow" as predicted by theory
+- Infants experience **faster flow than mothers** even when geometry, speed of locomotion equated [[@raudies_understanding_2012]](http://doi.org/10.1109/DevLrn.2012.6400584)
+- Motion "prior" for infants faster than for mothers [[@raudies_visual_2014]](http://doi.org/http://dx.doi.org/10.1162/NECO_a_00645) and empirical motion priors not "slow" as predicted by theory [[@stocker_noise_2006]](http://doi.org/10.1038/nn1669)
 
 ## Developmental/Cultural Factors
 
@@ -98,7 +95,7 @@ f^2+y^2 & -xy & -fy
 <div class="centered">
 </br>
 <img src="img/kretch-etal.png" width=600px/>
-
+</br>
 [[@kretch_crawling_2014]](http://dx.doi.org/10.1111/cdev.12206)
 </div>
 
@@ -145,12 +142,22 @@ f^2+y^2 & -xy & -fy
 
 - First-person videos from head-mounted [cameras](https://github.com/gilmore-lab/ICIS-2016-New-Orleans/blob/master/methods.md#camera)
 - Parents asked to record [4-6 hrs of daily activities](https://github.com/gilmore-lab/ICIS-2016-New-Orleans/blob/master/methods.md#parent-instructions).
-- Chennai, Tamil Nadu, India & Bloomington, Indiana, U.S.
+
+----
+
+<div class="centered">
+<img src="img/bloomington.jpg" width=400px>
+<img src="img/chennai.jpg" width=400px>
+</div>
 
 ## Sample characteristics {.flexbox .vcenter}
 
-
 ```{r}
+library(knitr)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
 us.df <- read.csv("analysis/data/PerInfUSms.csv", header=TRUE)
 india.df <- read.csv("analysis/data/PerInfIndiams.csv", header=TRUE)
 
@@ -184,23 +191,29 @@ Data & excerpts: <http://databrary.org/volume/81>
 
 </div>
 
+----
+
+<iframe src="https://nyu.databrary.org/volume/81">
+</iframe>
+
 ## Workflow
 
 - Extract optic flow from video, [(code repo)](https://github.com/opticflow/analysis)
-- Human coders judge whether infant is moving or stationary.
-- How do flow patterns and speeds vary by
+- Human coders: is infant **moving** or **stationary**?
+- How do flow **speeds** and **patterns** vary by
     + Age
     + Geography/Culture
     + Moving/stationary status
     
----
+----
 
 <div class="centered">
 <video width="750" height="450" controls>
   <source src="https://nyu.databrary.org/slot/11677/1737249,3012042/asset/41790/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
+</br>
+</br>
 [[@203af95d-7211-4af0-9b68-d8feba107e7d]](http://dx.doi.org/10.17910/B7988V)
 </div>
 
@@ -211,7 +224,8 @@ Data & excerpts: <http://databrary.org/volume/81>
   <source src="https://nyu.databrary.org/slot/11680/0,24500/asset/41871/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
+</br>
+</br>
 [[@203af95d-7211-4af0-9b68-d8feba107e7d]](http://dx.doi.org/10.17910/B7988V)
 </div>
 
@@ -222,7 +236,8 @@ Data & excerpts: <http://databrary.org/volume/81>
   <source src="https://nyu.databrary.org/slot/11680/25500,50000/asset/41873/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
+</br>
+</br>
 [[@203af95d-7211-4af0-9b68-d8feba107e7d]](http://dx.doi.org/10.17910/B7988V)
 </div>
 
@@ -303,6 +318,13 @@ p.moving.plt
 ```
 </div>
 
+----
+
+<div class="centered">
+<img src="img/bloomington.jpg" width=400px>
+<img src="img/chennai.jpg" width=400px>
+</div>
+
 ## Illustrative Speed Histograms - 6 weeks {.flexbox .vcenter}
 
 <div class="centered">
@@ -349,6 +371,11 @@ p.moving.plt
 - Time in motion increases, faster in U.S.
 - Fast speeds, broad speed distributions
 - Linear flow >> radial or rotational flow
+
+## Implications
+
+- Infant perception, brain responses reflect statistics of visual environment
+- Modest differences in experienced visual motion by culture
 
 ## Stack
 
