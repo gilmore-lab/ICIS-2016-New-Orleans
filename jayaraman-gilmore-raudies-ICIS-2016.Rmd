@@ -36,7 +36,7 @@ Supported by NSF BCE-1147440, NSF BCS-1238599, NICHD U01-HD-076595
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o27tIdYggY0" frameborder="0" allowfullscreen></iframe>
 
-## Optic Floe Components {.flexbox .vcenter}
+## Optic Flow Components {.flexbox .vcenter}
 
 <div class="centered">
 <img src="img/optic-flow-types.png" width=900px>
@@ -374,8 +374,10 @@ p.moving.plt
 
 ## Implications
 
-- Infant perception, brain responses reflect statistics of visual environment
+- Infant perception, brain responses reflect statistics of natural visual environment
 - Modest differences in experienced visual motion by culture
+- Are fast speeds perceptually meaningful?
+- Prolonged development of gaze stabilization, visual proprioception
 
 ## Stack
 
